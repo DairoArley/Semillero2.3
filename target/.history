@@ -1,0 +1,9 @@
+test
+exit
+test
+exit
+test
+testOnly co.com.scalatraining.syntax.SyntaxSuite
+clear
+testOnly co.com.scalatraining.syntax.SyntaxSuite
+testOnly co.com.scalatraining.tuples.TupleSuite
