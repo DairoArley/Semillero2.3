@@ -7,19 +7,19 @@ import scala.collection.immutable.ListSet
 
 class SetSuite extends FunSuite {
 
-  test("Construccion de un Set"){
-    val set = Set(1,2,3)
-    assert(set.size==3)
+  test("Construccion de un Set") {
+    val set = Set(1, 2, 3)
+    assert(set.size == 3)
   }
 
-  test("Adicion de un elemento a un Set"){
+  test("Adicion de un elemento a un Set") {
     val set = Set.empty[Int]
     val set2 = set + 1
     assert(set == Set.empty[Int])
     assert(set2 == Set(1))
   }
 
-  test("Un conjunto no debe tener elementos repetidos"){
+  test("Un conjunto no debe tener elementos repetidos") {
     val set = Set.empty[Int]
     val set2 = set + 1
     val set3 = set2 + 1
@@ -120,30 +120,30 @@ class SetSuite extends FunSuite {
 
   // -------------------------------------------------------
 
-  test("SortedSet"){
-    val s = SortedSet(1,4,3,2)
+  test("SortedSet") {
+    val s = SortedSet(1, 4, 3, 2)
 
-    assert(s.head==1)
-    assert(s.tail.head==2)
-    assert(s.tail.tail.head==3)
-    assert(s.tail.tail.tail.head==4)
+    assert(s.head == 1)
+    assert(s.tail.head == 2)
+    assert(s.tail.tail.head == 3)
+    assert(s.tail.tail.tail.head == 4)
   }
 
 
   // Elements are stored internally in reversed insertion order
-  test("ListSet"){
+  test("ListSet") {
     val s = ListSet.empty[Int]
     val r = s + 1 + 4 + 3 + 2
 
     println(r)
     println(r.head)
-    assert(r.head==1)
-    assert(r.tail.head==4)
-    assert(r.tail.tail.head==3)
-    assert(r.tail.tail.tail.head==2)
+    assert(r.head == 1)
+    assert(r.tail.head == 4)
+    assert(r.tail.tail.head == 3)
+    assert(r.tail.tail.tail.head == 2)
   }
 
-  test("BitSet"){
+  test("BitSet") {
     val s = BitSet.empty
     val r = s + 1 + 2 + 3 + 0
     assert(r.head == 0)
@@ -151,5 +151,26 @@ class SetSuite extends FunSuite {
     assert(r.tail.tail.head == 2)
     assert(r.tail.tail.tail.head == 3)
   }
-
 }
+
+  /*test("Union de Conjuntos"){
+    val set1 = Set(1,2,3,4)
+    val set2 = Set(4,5,6,7)
+
+    val set3 = set1.foreach( x =>  set2 + x )
+    set3 = set1.map(x => set2.apply(x).equals(false) )
+    assert(set3 == Set(5, 1, 6, 2, 7, 3, 4) )
+
+  }
+
+    test("interseccion de Conjuntos"){
+    val set1 = Set(1,2,3,4)
+    val set2 = Set(4,5,6,7)
+
+    var set3 = Set.empty[Int]
+    set3 = set1.map(x => set2.apply(x).equals(true) )
+    assert(set3 == Set(4)
+
+  )
+
+  }*/

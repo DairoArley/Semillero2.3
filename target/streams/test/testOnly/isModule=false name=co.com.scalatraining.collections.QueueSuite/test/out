@@ -1,0 +1,4 @@
+[0m[[0minfo[0m] [0m[32mQueueSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se puede retornar el enèsimo elemento de la cola[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se puede preguntar si existe un elemento en la cola[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se puede eliminar varias elementos del inicio de la cola[0m[0m

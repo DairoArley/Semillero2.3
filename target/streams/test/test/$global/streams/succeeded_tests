@@ -1,18 +1,20 @@
 #Successful Tests
-#Mon Jul 23 16:14:58 COT 2018
-co.com.scalatraining.scalatest.specs.SetFreeSpec=1532351762511
-co.com.scalatraining.collections.SetSuite=1532351762649
+#Tue Jul 24 14:58:40 COT 2018
+co.com.scalatraining.collections.MapSuite=1532351762892
+co.com.scalatraining.effects.FutureSuite=1532351770997
+co.com.scalatraining.collections.StackSuite=1532459782491
+co.com.scalatraining.effects.TrySuite=1532351762848
+co.com.scalatraining.tuples.TupleSuite=1532437283177
+co.com.scalatraining.modeling.ModelingSuite=1532351762274
+co.com.scalatraining.effects.EitherSuite=1532351762386
+co.com.scalatraining.effects.OptionSuite=1532351762861
+co.com.scalatraining.collections.QueueSuite=1532462320565
 co.com.scalatraining.scalatest.specs.SetFunSpec=1532351762406
-co.com.scalatraining.scalatest.specs.SetWordSpec=1532351762401
+co.com.scalatraining.scalatest.specs.SetFreeSpec=1532351762511
 co.com.scalatraining.scalatest.specs.SetPropSpec=1532351762847
-co.com.scalatraining.collections.ListSuite=1532351762472
+co.com.scalatraining.collections.SetSuite=1532458379204
+co.com.scalatraining.scalatest.specs.HelloSpec=1532351762808
+co.com.scalatraining.syntax.SyntaxSuite=1532377793809
 co.com.scalatraining.scalatest.specs.TVSetSpec=1532351762588
 co.com.scalatraining.currying.CurryingSuite=1532351762555
-co.com.scalatraining.collections.MapSuite=1532351762892
-co.com.scalatraining.effects.EitherSuite=1532351762386
-co.com.scalatraining.modeling.ModelingSuite=1532351762274
-co.com.scalatraining.effects.OptionSuite=1532351762861
-co.com.scalatraining.effects.TrySuite=1532351762848
-co.com.scalatraining.syntax.SyntaxSuite=1532377793809
-co.com.scalatraining.effects.FutureSuite=1532351770997
-co.com.scalatraining.scalatest.specs.HelloSpec=1532351762808
+co.com.scalatraining.scalatest.specs.SetWordSpec=1532351762401

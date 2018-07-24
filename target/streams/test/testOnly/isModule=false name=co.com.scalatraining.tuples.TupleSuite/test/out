@@ -1,5 +1,4 @@
 [0m[[0minfo[0m] [0m[32mTupleSuite:[0m[0m
 [0m[[0minfo[0m] [0m[32m- Una tupla se debe poder crear[0m[0m
 [0m[[0minfo[0m] [0m[32m- tuplas[0m[0m
-[0m[[0minfo[0m] [0m[31m- promedio *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  Expected 6, but got 0 (TupleSuite.scala:21)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Map[0m[0m

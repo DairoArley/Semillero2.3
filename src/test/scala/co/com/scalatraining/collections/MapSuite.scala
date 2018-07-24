@@ -15,7 +15,7 @@ class MapSuite extends FunSuite {
   }
 
   test("foreach en un Map") {
-    val map = Map("1" -> 1, "2" -> 2, "3" -> 3)
+    val map: Map[String, Int] = Map("1" -> 1, "2" -> 2, "3" -> 3)
     assertResult(6) {
       var sum = 0
       map.foreach((x) =>
@@ -129,5 +129,12 @@ class MapSuite extends FunSuite {
       map.mapValues(valor => valor * valor)
     }
   }
+
+  test("Hilera"){
+    val hola : String = "Hola a todos"
+    hola.split(" ").groupBy(f = x => x).mapValues(_.size)
+
+  }
+
 
 }

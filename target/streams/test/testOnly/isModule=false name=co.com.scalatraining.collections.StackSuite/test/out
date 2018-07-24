@@ -1,0 +1,8 @@
+[0m[[0minfo[0m] [0m[32mStackSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Una lista se debe poder acumular[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se puede crear una Pila[0m[0m
+[0m[[0minfo[0m] [0m[32m- Una pila se debe poder recorrer imperativamente[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se puede retirar el ultimo elemento apilado[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se puede apilar varios elementos en la pila[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se debe poder reversar una pila[0m[0m
+[0m[[0minfo[0m] [0m[32m- Se debe poder comparar dos pilas iguales[0m[0m

@@ -237,5 +237,14 @@ class ListSuite extends FunSuite {
 
   }
 
+  test("flatmap"){
+    var lista = List(List(1,1), List(2,2))
+    var lista2 = lista.map(x => x.sum/x.size)
+
+    assert(lista2 == List(1,2))
+  }
+
+
+
 
 }
