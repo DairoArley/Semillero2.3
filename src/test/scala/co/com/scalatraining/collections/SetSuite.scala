@@ -152,16 +152,17 @@ class SetSuite extends FunSuite {
     assert(r.tail.tail.tail.head == 3)
   }
 }
+/*
+  test("Union de Conjuntos") {
+    val set1 = Set(1, 2, 3, 4)
+    val set2 = Set(4, 5, 6, 7)
 
-  /*test("Union de Conjuntos"){
-    val set1 = Set(1,2,3,4)
-    val set2 = Set(4,5,6,7)
-
-    val set3 = set1.foreach( x =>  set2 + x )
-    set3 = set1.map(x => set2.apply(x).equals(false) )
-    assert(set3 == Set(5, 1, 6, 2, 7, 3, 4) )
+    val set3 = set1.foreach(x => set2 + x)
+    set3 = set1.map(x => set2.apply(x).equals(false))
+    assert(set3 == Set(5, 1, 6, 2, 7, 3, 4))
 
   }
+}
 
     test("interseccion de Conjuntos"){
     val set1 = Set(1,2,3,4)

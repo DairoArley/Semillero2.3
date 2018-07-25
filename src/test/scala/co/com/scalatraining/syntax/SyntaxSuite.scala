@@ -225,6 +225,7 @@ class SyntaxSuite extends FunSuite{
         assert(n=="NOMBRE-FIJO")
       }
     }
+
   }
 
 }

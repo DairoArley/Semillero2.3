@@ -1,0 +1,10 @@
+[0m[[0minfo[0m] [0m[32mEitherSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Either left[0m[0m
+[0m[[0minfo[0m] [0m[32m- Either right[0m[0m
+[0m[[0minfo[0m] [0m[32m- Either left or right[0m[0m
+[0m[[0minfo[0m] [0m[32m- Un Either se debe poder fold por la derecha[0m[0m
+[0m[[0minfo[0m] [0m[32m- Un Either se debe poder fold por la izquierda[0m[0m
+[0m[[0minfo[0m] [0m[32m- Swap un Either[0m[0m
+[0m[[0minfo[0m] [0m[32m- Swap un Either Left[0m[0m
+[0m[[0minfo[0m] [0m[32m- for comp en Either todos Right[0m[0m
+[0m[[0minfo[0m] [0m[32m- for comp en Either con un Left[0m[0m

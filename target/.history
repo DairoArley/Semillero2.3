@@ -17,3 +17,9 @@ testOnly co.com.scalatraining.collections.StackSuite
 testOnly co.com.scalatraining.collections.SetSuite
 testOnly co.com.scalatraining.collections.StackSuite
 testOnly co.com.scalatraining.collections.QueueSuite
+testOnly co.com.scalatraining.syntax.SyntaxSuite
+testOnly co.com.scalatraining.effects.OptionSuite
+testOnly co.com.scalatraining.syntax.SyntaxSuite
+testOnly co.com.scalatraining.effects.OptionSuite
+testOnly co.com.scalatraining.effects.TrySuite
+testOnly co.com.scalatraining.effects.EitherSuite

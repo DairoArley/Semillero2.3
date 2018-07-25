@@ -35,7 +35,10 @@ class TrySuite extends FunSuite with Matchers {
   test("Se debe poder hacer pattern match sobre un Try que es Failure"){
     f match {
       case Success(valor) => assert(false)
-      case Failure(e) => assert(true)
+      case Failure(e) => {
+        println(s"la expcion generadda en parent mach es ${e.printStackTrace()}")
+      }
+        assert(true)
     }
   }
 
@@ -54,6 +57,8 @@ class TrySuite extends FunSuite with Matchers {
   test("Un Success se debe poder map [assert con for-comp]"){
     val res = s.map(x=>"HOLA")
     assert(res.isSuccess)
+    assert(s==Success(1))
+    assert(res==Success("HOLA"))
 
     for{
       ss <- res
@@ -86,6 +91,15 @@ class TrySuite extends FunSuite with Matchers {
     res.flatMap(s => Try(assert(s == "HOLA ME HE RECUPERADO")) )
 
   }
+
+  test("Error en la recupoeracion con recover"){
+    val rec = f.recover{
+      case e: Exception => new Exception("Error propio")
+    }
+
+    println(s"rec $rec")
+  }
+
 
   test("Un Failure se debe poder recuperar con recoverWith"){
 
@@ -149,6 +163,36 @@ class TrySuite extends FunSuite with Matchers {
     } yield x + y + z
 
     assert(res.isFailure)
+
+  }
+
+  test("Try for-com. A chain of Tries with a Failure is a Failure 2"){
+
+    val res = for{
+      x <- s
+      y <- f.recover { case e: Exception => 6    }
+      z <- s
+    } yield x + y + z
+
+    assert(res.isSuccess)
+
+  }
+
+  test("Try for-com. A chain of Tries with a Failure is a Failure 3"){
+
+    val res = for{
+      x <- s
+      y <- f
+      z <- s
+    } yield x + y + z
+
+    val res2 = res.recover{
+      case e: Exception => {
+        5
+      }
+    }
+
+    assert(res2.isSuccess)
 
   }
 

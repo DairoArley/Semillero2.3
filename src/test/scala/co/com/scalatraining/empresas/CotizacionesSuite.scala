@@ -1,9 +1,6 @@
-package co.com.scalatraining.Empresas
+package co.com.scalatraining.empresas
 
 import org.scalatest.FunSuite
-import co.com.scalatraining.modelling.dominio.entidades.Trabajador
-
-import scala.collection.immutable.Stack
 
 class CotizacionesSuite extends FunSuite {
 
@@ -19,9 +16,9 @@ class CotizacionesSuite extends FunSuite {
     def IgnorarCotizaciones0()={
 
       val list1 = List()
-      list1 = archivo.foreach{ case(a,b,c,d,u) => u == 0
+      //list1 = archivo.foreach{ case(a,b,c,d,u) => u == 0
 
-      }
+     // }
 
     }
   }

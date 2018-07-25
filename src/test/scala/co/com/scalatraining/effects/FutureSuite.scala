@@ -87,8 +87,7 @@ class FutureSuite extends FunSuite {
 
     assert(res == 3)
 
-
-
+    
   }
 
   test("Se debe poder manejar el error de un Future de forma imperativa") {
