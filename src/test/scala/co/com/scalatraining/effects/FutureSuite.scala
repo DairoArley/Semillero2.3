@@ -14,6 +14,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 class FutureSuite extends FunSuite {
 
+
   test("Un futuro se puede crear") {
 
     val hiloPpal = Thread.currentThread().getName
@@ -67,7 +68,7 @@ class FutureSuite extends FunSuite {
     assert(resultado == "Hola muchachos")
   }
 
-  test("Se debe poder encadenar Future con for-comp") {
+  test("aqui Se debe poder encadenar Future con for-comp") {
     val f1 = Future {
       Thread.sleep(200)
       1
@@ -78,12 +79,14 @@ class FutureSuite extends FunSuite {
       2
     }
 
+
+
     val f3: Future[Int] = for {
       res1 <- f1
       res2 <- f2
-    } yield res1 + res2
+    } yield {res1 + res2 }
 
-    val res = Await.result(f3, 10 seconds)
+    val res = Await.result(f3, 1 seconds)
 
     assert(res == 3)
 
@@ -146,7 +149,7 @@ class FutureSuite extends FunSuite {
 
     val res = Await.result(divisionPorCero, 10 seconds)
 
-    assert(threadName1 == threadName2)
+    //assert(threadName1 == threadName2)
     assert(res == "No es posible dividir por cero")
 
   }
@@ -322,5 +325,64 @@ class FutureSuite extends FunSuite {
 
   }
 
+  test("probando") {
 
+    val e = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(5))
+    val o = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(1))
+
+    def guardarBD(): Unit = {
+        println("guardando en la base de datos")
+    }
+    def consultarClima(): Future[String] = {
+      Future{
+        guardarBD()
+      }(o)
+      println(s"consultando el clima ${Thread.currentThread().getName}")
+      Future("ksks")
+    }
+
+    val list = List(1,2,3,4,5)
+    list.foreach( x => {
+      Future{consultarClima()}(e)
+      println(s"consultando el clima${Thread.currentThread().getName}")
+     }
+    )
+
+
+  }
+
+  test("Github"){
+
+    case class UsuarioCompleto(nombre:String)
+    case class Repositorios (nombreRepo:String, usuarioGithub: UsuarioCompleto, lenguaje:String, lineas:Int)
+    val list1 =
+    List( Repositorios("a", UsuarioCompleto("Dairo"), "java", 1000),
+      Repositorios("b", UsuarioCompleto("Dairo"), "java", 1200),
+      Repositorios("c", UsuarioCompleto("Jose"), "scala", 1000),
+      Repositorios("b", UsuarioCompleto("Juan"), "javaScript", 150)
+    )
+
+    def obtenerNombreRepositorios(usuario:String):Future[List[String]]= {
+
+     var uno = Future {
+        list1.filter(x => x.usuarioGithub.nombre == usuario).foreach( x => x.nombreRepo)
+      }
+      //println(s"este es ${uno}")
+      Future(List("a", "b"))
+
+    }
+
+    def obtenerListaRepositorios(usuario: String):Future[List[Repositorios]] = {
+      var uno = Future {
+        list1.filter(x => x.usuarioGithub.nombre == usuario)
+      }
+      //List(Repositorios("b", UsuarioCompleto("Dairo"), "java", 1200))
+      Future(Await.result(uno, 1 seconds))
+
+    }
+
+    val m =  obtenerListaRepositorios("Dairo")
+    assert(m == Future(List( Repositorios("a", UsuarioCompleto("Dairo"), "java", 1000), Repositorios("b", UsuarioCompleto("Dairo"), "java", 1200) ) ))
+
+  }
 }

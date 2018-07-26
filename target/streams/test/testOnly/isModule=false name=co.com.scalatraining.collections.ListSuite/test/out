@@ -4,8 +4,7 @@
 [0m[[0minfo[0m] [0m[32m- Una lista se debe poder recorrer imperativamente[0m[0m
 [0m[[0minfo[0m] [0m[32m- A una lista se le debe poder adicionar elementos[0m[0m
 [0m[[0minfo[0m] [0m[32m- Concatenar[0m[0m
-[0m[[0minfo[0m] [0m[31m- Apen propen *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  List(1, 1, 2, 3, 4) did not equal List(1, 2, 3, 4) (ListSuite.scala:66)[0m[0m
+[0m[[0minfo[0m] [0m[32m- Apen propen[0m[0m
 [0m[[0minfo[0m] [0m[32m- A una lista se le debe poder eliminar elementos con drop[0m[0m
 [0m[[0minfo[0m] [0m[32m- A una lista se le pueden descartar elementos en una direccion determinada (right)[0m[0m
 [0m[[0minfo[0m] [0m[32m- Se debe poder consultar el primer elemento de una lista de forma insegura[0m[0m
@@ -14,8 +13,6 @@
 [0m[[0minfo[0m] [0m[32m- Que pasa si hacemos tail a un List()[0m[0m
 [0m[[0minfo[0m] [0m[32m- Una lista se debe poder filtrar con una hof[0m[0m
 [0m[[0minfo[0m] [0m[32m- Una lista se debe poder acumular[0m[0m
-[0m[[0minfo[0m] [0m[31m- multiplicacion *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  Expected 24, but got 0 (ListSuite.scala:143)[0m[0m
 [0m[[0minfo[0m] [0m[32m- Una lista se debe poder acumular en una direccion determinada (izquierda)[0m[0m
 [0m[[0minfo[0m] [0m[32m- Una lista se debe poder acumular en una direccion determinada (derecha)[0m[0m
 [0m[[0minfo[0m] [0m[32m- fold sobre una List de objetos[0m[0m

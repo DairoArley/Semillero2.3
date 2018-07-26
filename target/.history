@@ -23,3 +23,5 @@ testOnly co.com.scalatraining.syntax.SyntaxSuite
 testOnly co.com.scalatraining.effects.OptionSuite
 testOnly co.com.scalatraining.effects.TrySuite
 testOnly co.com.scalatraining.effects.EitherSuite
+testOnly co.com.scalatraining.collections.ListSuite
+testOnly co.com.scalatraining.effects.FutureSuite
